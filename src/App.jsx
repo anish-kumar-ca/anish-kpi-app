@@ -244,7 +244,7 @@ const S = {
     background: "#0c0c0e",
     minHeight: "100vh",
     color: "#d4d0c8",
-    fontSize: 13,
+    fontSize: 15,
   },
   inner: {
     maxWidth: 900,
