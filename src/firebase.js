@@ -2,16 +2,17 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
-// ⚠️ REPLACE THESE WITH YOUR FIREBASE CONFIG
+// Firebase configuration for Anish's KPI app
 // Get these values from your Firebase Console (Settings → Project Settings)
 const firebaseConfig = {
-  apiKey: "REPLACE_WITH_YOUR_API_KEY",
-  authDomain: "REPLACE_WITH_YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://REPLACE_WITH_YOUR_PROJECT_ID.firebaseio.com",
-  projectId: "REPLACE_WITH_YOUR_PROJECT_ID",
-  storageBucket: "REPLACE_WITH_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "REPLACE_WITH_YOUR_SENDER_ID",
-  appId: "REPLACE_WITH_YOUR_APP_ID",
+  apiKey: "AIzaSyDUX1XWEsoX-_It9of5ZMsDA77OkRl2xW4",
+  authDomain: "anish-kpi.firebaseapp.com",
+  databaseURL: "https://anish-kpi-default-rtdb.firebaseio.com",
+  projectId: "anish-kpi",
+  storageBucket: "anish-kpi.firebasestorage.app",
+  messagingSenderId: "487617828374",
+  appId: "1:487617828374:web:b4b0c9802a720f34368737",
+  measurementId: "G-W57L6V4VL6"
 };
 
 // Initialize Firebase
