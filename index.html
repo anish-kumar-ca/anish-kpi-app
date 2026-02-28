@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c0c0e" />
+    <meta name="description" content="Anish's Personal Operating System - Weekly KPI Tracker" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- iOS Status Bar -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Anish KPI" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23c8a96e' width='180' height='180'/><text x='90' y='95' font-size='80' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='white' font-family='serif'>🏆</text></svg>" />
+
+    <title>Anish's Life Score - KPI Tracker</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #0c0c0e;
+        color: #d4d0c8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register service worker for offline support
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+      }
+
+      // Prompt to install PWA on compatible devices
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        deferredPrompt = e;
+      });
+    </script>
+  </body>
+</html>
